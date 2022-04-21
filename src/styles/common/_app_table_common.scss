@@ -1,0 +1,39 @@
+.table-container {
+    position: relative;
+
+    .mat-table, .table {
+      width: 100%;
+      max-width: 100%;
+      display: table;
+    }
+
+    .mat-row, .mat-header-row, tr {
+      display: table-row;
+      height: inherit;
+    }
+
+    .mat-cell, .mat-header-cell, th {
+      word-wrap: initial;
+      display: table-cell;
+      padding: 0px 0.6rem;
+      line-break: unset;
+      width: auto;
+      overflow: hidden;
+      vertical-align: middle;
+      border: 1px solid rgb(241, 241, 241);
+    }
+
+    .mat-header-cell, th {
+      font-size: 0.72rem;
+      padding: 0.65rem 0.75rem;
+      background-color: #f6f6f6;
+      color: rgb(143, 143, 143);
+    }
+
+    .mat-row {
+      .mat-cell {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+      }
+    }
+  }

@@ -1,0 +1,14 @@
+.home-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.list-container {
+    flex-grow: 1;
+}
+
+.filter-container.hide {
+    display: none;
+}

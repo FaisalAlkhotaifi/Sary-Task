@@ -1,0 +1,33 @@
+<ng-container *ngIf="field && form">
+    <div [formGroup]="form" [ngSwitch]="field.type" class="field-container">
+        <div *ngSwitchCase="'text'">
+            <input 
+                type="text" 
+                matInput 
+                [placeholder]="field.title"
+                [formControlName]="field.title"
+                class="w-100">
+        </div>
+    
+        <div *ngSwitchCase="'dropdown'" class="field-label-container">
+            <label> {{ field.title }} </label>
+            <div>
+                <mat-select [formControlName]="field.title" [multiple]="field.multiple">
+                    <mat-option *ngIf="options && options.length > 0"></mat-option>
+                    <mat-option *ngFor="let option of options; trackBy: trackByFn" [value]="option.name">
+                        {{ option.key }}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+    
+        <div *ngSwitchCase="'date'">
+            <label> {{ field.title }} </label>
+            <div class="date-container">
+                <input matInput [matDatepicker]="picker" [formControlName]="field.title">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+        </div>
+    </div>
+</ng-container>

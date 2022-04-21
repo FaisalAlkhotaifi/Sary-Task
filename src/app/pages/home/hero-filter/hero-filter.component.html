@@ -1,0 +1,12 @@
+<div class="filter-page-container">
+    <div class="header-container">
+        <span class="title"><strong>FILTERS</strong></span>
+    </div>
+    <div class="content-container">
+        <app-dynamic-form
+            [formFields]="filterFormFieldConfig"
+            actionName="Filter"
+            (onSubmitForm)="onFilter($event)">
+        </app-dynamic-form>
+    </div>
+</div>

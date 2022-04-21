@@ -1,0 +1,9 @@
+<div class="container-fluid home-container">
+    <div class="filter-container" [ngClass]="{'hide': isFilterHidden}">
+        <app-hero-filter></app-hero-filter>
+    </div>
+    
+    <div class="list-container">
+        <app-hero-list (onFilterClicked)="onFilter()"></app-hero-list>
+    </div>
+</div>

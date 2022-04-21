@@ -1,0 +1,47 @@
+@import '../../../../styles/common/app_table_common';
+
+.list-page-container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.list-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.15rem;
+
+    div {
+        padding: 0.25rem 0.75rem;
+        background-color: white;
+    }
+
+    & > div:first-child {
+        display: flex;
+        flex-grow: 1;
+        align-self: stretch;
+        align-items: center;
+    }
+
+    & > div:last-child {
+        flex-grow: 20;
+        justify-content: flex-end;
+        display: flex;
+
+        input {
+            flex-grow: 1;
+        }
+
+        button i {
+            color: #cecece;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.link-feel {
+    color: rgb(74, 147, 250);
+    text-decoration: underline;
+}

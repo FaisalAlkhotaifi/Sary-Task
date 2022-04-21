@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="form-container">
+        <div *ngFor="let field of formFields" class="form-group">
+            <app-dynamic-form-field [field]="field" [form]="form"></app-dynamic-form-field>
+        </div>
+    
+        <div class="action-container">
+            <button class="btn btn-primary" [disabled]="form.invalid">
+                <div class="button-content-container">
+                    <i class="fa-solid fa-filter"></i>
+                    {{ actionName }}
+                </div>
+            </button>
+        </div>
+    </div>
+</form>
