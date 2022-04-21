@@ -1,8 +1,12 @@
 import { AfterViewInit, Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { MatSort, Sort } from '@angular/material/sort';
+
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { select, Store } from '@ngrx/store';
+
 import { Hero } from 'src/app/models/hero.model';
+
+import { select, Store } from '@ngrx/store';
+
 import { GetHeroes } from 'src/app/store/actions/hero.action';
 import { selectHeroList } from 'src/app/store/selectors/hero.selectors';
 import { AppState } from 'src/app/store/state/app.state';

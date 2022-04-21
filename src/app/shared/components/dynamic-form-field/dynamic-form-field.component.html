@@ -1,12 +1,12 @@
 <ng-container *ngIf="field && form">
     <div [formGroup]="form" [ngSwitch]="field.type" class="field-container">
-        <div *ngSwitchCase="'text'">
+        <div *ngSwitchCase="'text'" class="form-input-container">
+            <span *ngIf="isPhone" matPrefix>+1 &nbsp;</span>
             <input 
                 type="text" 
                 matInput 
                 [placeholder]="field.title"
-                [formControlName]="field.title"
-                class="w-100">
+                [formControlName]="field.title">
         </div>
     
         <div *ngSwitchCase="'dropdown'" class="field-label-container">

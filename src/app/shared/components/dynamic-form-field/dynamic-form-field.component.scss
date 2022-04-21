@@ -8,9 +8,15 @@
         border-bottom: 3px solid rgb(81, 141, 214);
     }
 
+    .form-input-container {
+        display: flex;
+        flex-direction: row;
+    }
+
     input {
         border: 0;
         background-color: transparent;
+        flex-grow: 1;
     }
 
     input:hover {
